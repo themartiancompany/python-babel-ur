@@ -3,7 +3,7 @@
 
 pkgbase=python-babel
 pkgname=(python-babel python2-babel)
-pkgver=2.2.0
+pkgver=2.3.2
 pkgrel=1
 pkgdesc="A collection of tools for internationalizing Python applications"
 url="http://babel.pocoo.org/"
@@ -13,7 +13,7 @@ makedepends=('python' 'python2'
 	    'python-setuptools' 'python2-setuptools'
 	    'python-pytz' 'python2-pytz')
 source=("$pkgbase-$pkgver.tar.gz::https://github.com/mitsuhiko/babel/archive/$pkgver.tar.gz")
-md5sums=('44ad7b474978a4976ce5a83e9e33aaa1')
+md5sums=('8800dc94ba33bcd5e673b247de2eade2')
 
 package_python-babel() {
   depends=('python' 'python-pytz')
