@@ -16,16 +16,27 @@ pkgdesc="A collection of tools for internationalizing Python applications"
 url="http://babel.pocoo.org/"
 license=("BSD")
 arch=('any')
-depends=('python' 'python-pytz')
-makedepends=('python-setuptools')
-checkdepends=('python-pytest' 'python-freezegun')
+depends=(
+  'python'
+  'python-pytz'
+)
+makedepends=(
+  'python-setuptools'
+)
+checkdepends=(
+  'python-pytest'
+  'python-freezegun'
+)
 noextract=("cldr-core-$_core.zip")
-source=("$pkgname-$pkgver.tar.gz::https://github.com/python-babel/babel/archive/v$pkgver.tar.gz"
-        "cldr-core-$_core.zip::http://unicode.org/Public/cldr/$_core/core.zip"
-        "cldr-common-$_core.0.zip::http://unicode.org/Public/cldr/$_core/cldr-common-$_core.0.zip")
-sha256sums=('ad76eab6905b626d7d4110d2032bc60c69bef225ec94c67d7229425ebe53f659'
-            '7800dadb6a11e06ba1475f8c2830aa87e0749ed441c953d8deea60b4baeef592'
-            '7800dadb6a11e06ba1475f8c2830aa87e0749ed441c953d8deea60b4baeef592')
+source=(
+  "$pkgname-$pkgver.tar.gz::https://github.com/python-babel/babel/archive/v$pkgver.tar.gz"
+  "cldr-core-$_core.zip::http://unicode.org/Public/cldr/$_core/core.zip"
+  "cldr-common-$_core.0.zip::http://unicode.org/Public/cldr/$_core/cldr-common-$_core.0.zip")
+sha256sums=(
+  'ad76eab6905b626d7d4110d2032bc60c69bef225ec94c67d7229425ebe53f659'
+  '7800dadb6a11e06ba1475f8c2830aa87e0749ed441c953d8deea60b4baeef592'
+  '7800dadb6a11e06ba1475f8c2830aa87e0749ed441c953d8deea60b4baeef592'
+)
 
 prepare() {
   cp "$srcdir"/cldr-core-$_core.zip babel-$pkgver/cldr/cldr-core-$_core.zip
